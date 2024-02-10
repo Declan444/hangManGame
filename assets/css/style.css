@@ -9,6 +9,7 @@
     flex-direction: column;
     background-color: brown;
     height: auto;
+    
 }
 
 #game-text{
@@ -17,4 +18,59 @@
     flex-direction: column;
     text-align: center;
     margin: 5px;
+    
 }
+
+#game-text div{
+    display: flex;
+    height: 30px;
+    width: auto;
+    max-width: 1200px;
+    background-color: #a175f1;
+    padding: 5px;
+    margin: 5px;
+    justify-content: center;
+
+}
+
+#stickmanCanvas{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    width: 300px;
+    background-color: #f0f0f0;
+    border-bottom: 5px solid #ccc;
+}
+
+#game{
+    height: 310px;
+    width: auto;
+    justify-self: center;
+    background-color: #1a1919;
+    display: grid;
+    justify-content: center;
+    margin: 0 5px;
+}
+
+.underline {
+    display: flex;
+    border-bottom: 1px solid black;
+    margin: 5px;
+    width: auto;
+    text-align: center;
+    background-color: bisque;
+    height: auto;
+    justify-content: center;
+}
+#keys-box{
+    display: flex;
+    width: auto;
+    height: auto;
+    margin: 5px;
+    background-color: aquamarine;
+    justify-content: center;
+    
+}
+
