@@ -2,6 +2,17 @@
 const canvas = document.getElementById('stickmanCanvas');
 const draw = canvas.getContext("2d");
 
+let objectState ={
+    scaffold: true,
+    head: true,
+    body: true,
+    leftArm: true,
+    rightArm: true,
+    leftLeg: true,
+    rightLeg: true
+
+}
+
 // scaffold
 draw.beginPath()
 draw.moveTo(40, 230);
@@ -20,17 +31,19 @@ draw.stroke()
 draw.moveTo(150, 75)
 draw.lineTo(150, 150)
 draw.stroke()
-//arms
+// left arm
 draw.moveTo(150, 100)
 draw.lineTo(100, 100)
 draw.stroke()
+//right arm
 draw.moveTo(150,100)
 draw.lineTo(200, 100)
 draw.stroke()
-//legs
+//left leg
 draw.moveTo(150,150)
 draw.lineTo(100, 200)
 draw.stroke()
+//right leg
 draw.moveTo(150, 150)
 draw.lineTo(200, 200)
 draw.stroke()
