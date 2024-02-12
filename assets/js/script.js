@@ -91,32 +91,41 @@ revealButton.addEventListener('click', revealNextPart)
 
 console.log('testing again')
 
+
+
 // all above working find. Leave for now
 
 //trying to create the letter buttons in the keys box area 
 //create keys
+function createKey(letters){
+    console.log('getting this far')
+}
+
+
+
+
 function  createLetterKeys(){
+    console.log('calling create letter keys function')
     let letters = []
 
     for (let i=97; i <= 122; i++){
-        letters.push(String.fromCharCode(i))
-        console.log(letters)
+        letters.push(String.fromCharCode(i))    
+       
     }
-    
 
-//getting letters. letters is now an array of the alphabet in lowercase.
-
-
-
-// get the keys-box div
 let keysBox = document.getElementById('keys-box')
 
-//iterate through the letters array
 for (let i = 0; i < letters.length; i++){
-    let key = createKay(letters[i]);
+    let key = createKey(letters[i]);
     keysBox.appendChild(key)
-    console.log
+    console.log('did it get to here')
 }
-createLetterKeys()
+
 }
+
+let getLetters = document.getElementById('getLetters')
+getLetters.addEventListener('click', createLetterKeys)
+
+
 console.log('does the code run to here')
+
