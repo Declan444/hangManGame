@@ -90,3 +90,33 @@ let revealButton = document.getElementById('revealButton')
 revealButton.addEventListener('click', revealNextPart)
 
 console.log('testing again')
+
+// all above working find. Leave for now
+
+//trying to create the letter buttons in the keys box area 
+//create keys
+function  createLetterKeys(){
+    let letters = []
+
+    for (let i=97; i <= 122; i++){
+        letters.push(String.fromCharCode(i))
+        console.log(letters)
+    }
+    
+
+//getting letters. letters is now an array of the alphabet in lowercase.
+
+
+
+// get the keys-box div
+let keysBox = document.getElementById('keys-box')
+
+//iterate through the letters array
+for (let i = 0; i < letters.length; i++){
+    let key = createKay(letters[i]);
+    keysBox.appendChild(key)
+    console.log
+}
+createLetterKeys()
+}
+console.log('does the code run to here')
