@@ -70,6 +70,7 @@
     border-bottom: 2px solid black;
     margin: 5px;
     text-align: center;
+    color: transparent;
 }
 #keys-outer-box{
     display: flex;
