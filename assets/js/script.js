@@ -138,7 +138,7 @@ console.log('does the code run to here')
 // create an array that contains 5 letter words
 
 let fiveLetterWords = ['chair', 'table', 'apple', 'house', 'style']
-
+// function to randomly select a word from the array
 function getRandomWord(){
     let randomWordIndex = Math.floor(Math.random() * fiveLetterWords.length);
     return fiveLetterWords[randomWordIndex]
@@ -146,3 +146,22 @@ function getRandomWord(){
 }
 let selectedWord = getRandomWord()
 console.log(selectedWord)
+
+//create a letter guess function that ties into the random word
+//random word is selected word variable
+// letter is the letter selected by the user
+
+//create an array from the selected word
+
+let randomWordArray = selectedWord.split('')
+
+console.log(randomWordArray)
+// push the letters from the random array into the underline div
+for(let i=0; i< randomWordArray.length; i++){
+    let existingDiv = document.getElementById('letter-' + (i + 1))
+
+    if (existingDiv){
+        existingDiv.textContent = randomWordArray[i];
+    }
+}
+
