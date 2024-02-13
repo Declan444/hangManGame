@@ -69,6 +69,7 @@
     height: 15px;
     border-bottom: 2px solid black;
     margin: 5px;
+    text-align: center;
 }
 #keys-outer-box{
     display: flex;

@@ -103,8 +103,11 @@ function createKey(letter){
     key.className = 'key'
     key.textContent = letter;
 
-    key.addEventListener('click', function(){
-        key.style.backgroundColor = 'red'
+    
+    key.addEventListener('click', function(event){
+        key.style.backgroundColor = 'red';
+        document.getElementById('letter-1').textContent = letter;
+        
     })
     return key;
 }
