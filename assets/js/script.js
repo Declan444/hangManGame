@@ -97,22 +97,24 @@ console.log('testing again')
 
 //trying to create the letter buttons in the keys box area 
 //create keys
-function createKey(letters){
+function createKey(letter){
     console.log('getting this far')
+    let key = document.createElement('span')
+    key.className = 'key'
+    key.textContent = letter;
+
+    key.addEventListener('click', function(){
+        key.style.backgroundColor = 'red'
+    })
+    return key;
 }
-
-
-
-
 function  createLetterKeys(){
     console.log('calling create letter keys function')
     let letters = []
 
     for (let i=97; i <= 122; i++){
-        letters.push(String.fromCharCode(i))    
-       
+        letters.push(String.fromCharCode(i))      
     }
-
 let keysBox = document.getElementById('keys-box')
 
 for (let i = 0; i < letters.length; i++){
