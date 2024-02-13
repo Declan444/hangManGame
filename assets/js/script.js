@@ -118,8 +118,8 @@ function  createLetterKeys(){
 let keysBox = document.getElementById('keys-box')
 
 for (let i = 0; i < letters.length; i++){
-    let key = createKey(letters[i]);
-    keysBox.appendChild(key)
+    let keys = createKey(letters[i]);
+    keysBox.appendChild(keys)
     console.log('did it get to here')
 }
 

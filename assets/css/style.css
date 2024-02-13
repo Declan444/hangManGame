@@ -74,3 +74,16 @@
     
 }
 
+
+
+.key{
+    display: flex;
+    flex-wrap: wrap;
+    height: 30px;
+    width: 30px;
+    line-height: 5px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: white;
+}
+
