@@ -56,13 +56,19 @@
 
 .underline {
     display: flex;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(233, 42, 42);
     margin: 5px;
     width: auto;
     text-align: center;
     background-color: bisque;
     height: auto;
     justify-content: center;
+}
+.underline-box{
+    width: 15px;
+    height: 15px;
+    border-bottom: 2px solid black;
+    margin: 5px;
 }
 #keys-outer-box{
     display: flex;
