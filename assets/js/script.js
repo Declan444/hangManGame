@@ -134,3 +134,15 @@ getLetters.addEventListener('click', createLetterKeys)
 
 console.log('does the code run to here')
 
+
+// create an array that contains 5 letter words
+
+let fiveLetterWords = ['chair', 'table', 'apple', 'house', 'style']
+
+function getRandomWord(){
+    let randomWordIndex = Math.floor(Math.random() * fiveLetterWords.length);
+    return fiveLetterWords[randomWordIndex]
+    
+}
+let selectedWord = getRandomWord()
+console.log(selectedWord)
