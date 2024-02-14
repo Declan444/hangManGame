@@ -106,10 +106,12 @@ function createKey(letter){
     
     key.addEventListener('click', function(event){
         key.style.backgroundColor = 'red';
-        document.getElementById('letter-1').textContent = letter;
+        checkAndHighlightLetter(letter);
+       
         
     })
     return key;
+    
 }
 function  createLetterKeys(){
     console.log('calling create letter keys function')
@@ -125,8 +127,21 @@ for (let i = 0; i < letters.length; i++){
     keysBox.appendChild(keys)
     console.log('did it get to here')
 }
-
+    
 }
+// push the letters from the random array into the underline div. made letters white in css  so cant see in div until it turns to blue
+
+function checkAndHighlightLetter(clickedLetter){
+    for(let i = 0; i < randomWordArray.length; i++){
+        let existingDiv = document.getElementById('letter-' + (i + 1));
+        let randomLetter = randomWordArray[i]
+        if(existingDiv && randomLetter === clickedLetter){
+            existingDiv.style.backgroundColor = 'blue'
+        }
+    }
+}
+
+
 
 let getLetters = document.getElementById('getLetters')
 getLetters.addEventListener('click', createLetterKeys)
@@ -156,12 +171,16 @@ console.log(selectedWord)
 let randomWordArray = selectedWord.split('')
 
 console.log(randomWordArray)
-// push the letters from the random array into the underline div
+
+// pushes the word into the underline divs. 
+
 for(let i=0; i< randomWordArray.length; i++){
     let existingDiv = document.getElementById('letter-' + (i + 1))
-
+    let randomLetter = randomWordArray[i]
     if (existingDiv){
-        existingDiv.textContent = randomWordArray[i];
+        existingDiv.textContent = randomWordArray[i];  
     }
+
 }
+
 
