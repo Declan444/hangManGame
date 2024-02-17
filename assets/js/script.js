@@ -1,7 +1,9 @@
 //used W3 Schools to work out how to draw the stickman
 const canvas = document.getElementById('stickmanCanvas');
 const draw = canvas.getContext("2d");
-
+/**
+ * BodyPart will be the object that contains all of the stickman sections. Set boolean to false to not appear on the canvas
+ */
 let bodyPart ={
     scaffold: false,
     head: false,
@@ -12,7 +14,10 @@ let bodyPart ={
     rightLeg: false
 
 }
-// function to draw the stickman in its parts
+/**
+ * 
+ * @param {drawStickman} object the function that draws each part of the stickman on the canvas
+ */
 function drawStickman (object){
 
 // scaffold
@@ -65,11 +70,12 @@ draw.lineTo(200, 200)
 draw.stroke()
 }
 }
-
+/**revealNextPart function uses an if statement to reveal each bodyPart and then call the function
+ */
 function revealNextPart(){
     if(!bodyPart.scaffold){
         bodyPart.scaffold = true;
-        console.log('calling this function')
+        console.log(' to check if calling this function')
     }else if (!bodyPart.head){
         bodyPart.head = true;
     }else if (!bodyPart.body){
@@ -86,35 +92,81 @@ function revealNextPart(){
     
     drawStickman(bodyPart)
 }
+/**
+ * revealButton just put in place to check if the stickman reveal would work. To be removed later and replaced by click of alphabet letter
+ */
 let revealButton = document.getElementById('revealButton')
 revealButton.addEventListener('click', revealNextPart)
 
 console.log('testing again')
 
 
+/**
+ * getRandomWord function to randomely select a word from the array. return it as an array and assign it to selectedWord
+ */
 
-// all above working find. Leave for now
+// create an array that contains 5 letter words
+
+let fiveLetterWords = ['chair', 'table', 'apple', 'house', 'style']
+// function to randomly select a word from the array
+function getRandomWord(){
+    let randomWordIndex = Math.floor(Math.random() * fiveLetterWords.length);
+    return fiveLetterWords[randomWordIndex]
+    
+}
+
+let selectedWord = getRandomWord()
+console.log(selectedWord)
+
+
+
+//create an array from the selected word
+
+let randomWordArray = selectedWord.split('')
+
+console.log(randomWordArray)
+
+// pushes the word into the underline divs. 
+
+for(let i=0; i< randomWordArray.length; i++){
+    let existingDiv = document.getElementById('letter-' + (i + 1))
+    /*let randomLetter = randomWordArray[i]*/
+    if (existingDiv){
+        existingDiv.textContent = randomWordArray[i];  
+    }
+
+}
+
+
 
 //trying to create the letter buttons in the keys box area 
 //create keys
+/**
+ * @param {createKey} letter function to create a key. Style the background red. Function call extra functionality when need the letter button click to call the revealNextPart
+ * @returns 
+ */
 function createKey(letter){
     console.log('getting this far')
     let key = document.createElement('span')
     key.className = 'key'
     key.textContent = letter;
-
-    
+/**
+ * Event listener on Key to turn red when clicked and to call the checkAndHighlightLetter function
+ */
     key.addEventListener('click', function(event){
         key.style.backgroundColor = 'red';
         checkAndHighlightLetter(letter);
-       
-        
+          
     })
     return key;
     
 }
-function  createLetterKeys(){
-    console.log('calling create letter keys function')
+
+/**
+ * createLetterForKeys function to create the letters, put the letters into the key from createKay
+ */
+function  createLettersForKeys(){
+    console.log('calling create letter for keys function')
     let letters = []
 
     for (let i=97; i <= 122; i++){
@@ -129,58 +181,55 @@ for (let i = 0; i < letters.length; i++){
 }
     
 }
-// push the letters from the random array into the underline div. made letters white in css  so cant see in div until it turns to blue
+let getLetters = document.getElementById('getLetters')
+            getLetters.addEventListener('click', createLettersForKeys)
 
+
+// push the letters from the random array into the underline div. made letters white in css  so cant see in div until it turns to blue and add to the eventlistener
+/**
+ * 
+ * @param {checkAndHighlightLetter} clickedLetter function to check if the letter selected is in the array then it changes the div to blue and highlights the letter.
+ */
 function checkAndHighlightLetter(clickedLetter){
+    
     for(let i = 0; i < randomWordArray.length; i++){
         let existingDiv = document.getElementById('letter-' + (i + 1));
         let randomLetter = randomWordArray[i]
+        let letterButton = document.getElementsByClassName('key')
         if(existingDiv && randomLetter === clickedLetter){
             existingDiv.style.backgroundColor = 'blue'
+           
+            console.log('pressed the right key')
+            
+        } else if(existingDiv && letterButton !== clickedLetter){
+                
+            for (let i = 0; i <letterButton.length; i++){
+            letterButton[i].addEventListener('click', revealNextPart)
+
+            console.log('pressed the wrong key')
         }
+       
     }
+       
+    
+  
+}
+
 }
 
 
+        
+            
 
-let getLetters = document.getElementById('getLetters')
-getLetters.addEventListener('click', createLetterKeys)
+    
+
+
+
 
 
 console.log('does the code run to here')
 
 
-// create an array that contains 5 letter words
 
-let fiveLetterWords = ['chair', 'table', 'apple', 'house', 'style']
-// function to randomly select a word from the array
-function getRandomWord(){
-    let randomWordIndex = Math.floor(Math.random() * fiveLetterWords.length);
-    return fiveLetterWords[randomWordIndex]
-    
-}
-let selectedWord = getRandomWord()
-console.log(selectedWord)
-
-//create a letter guess function that ties into the random word
-//random word is selected word variable
-// letter is the letter selected by the user
-
-//create an array from the selected word
-
-let randomWordArray = selectedWord.split('')
-
-console.log(randomWordArray)
-
-// pushes the word into the underline divs. 
-
-for(let i=0; i< randomWordArray.length; i++){
-    let existingDiv = document.getElementById('letter-' + (i + 1))
-    let randomLetter = randomWordArray[i]
-    if (existingDiv){
-        existingDiv.textContent = randomWordArray[i];  
-    }
-
-}
 
 
