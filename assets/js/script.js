@@ -195,7 +195,8 @@ function checkAndHighlightLetter(clickedLetter){
     for(let i = 0; i < randomWordArray.length; i++){
         let existingDiv = document.getElementById('letter-' + (i + 1));
         let randomLetter = randomWordArray[i]
-        let letterButton = document.getElementsByClassName('key')
+    
+
         if(existingDiv && randomLetter === clickedLetter){
             existingDiv.style.backgroundColor = 'blue'
            
@@ -208,28 +209,12 @@ function checkAndHighlightLetter(clickedLetter){
 
             console.log('pressed the wrong key')
         }
-       
-    }
-       
-    
-  
-}
+      
+    }     
+   
 
 }
 
-
-        
-            
-
-    
-
-
-
-
-
-console.log('does the code run to here')
-
-
-
+}
 
 
