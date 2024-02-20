@@ -141,26 +141,7 @@ for(let i=0; i< randomWordArray.length; i++){
 
 //trying to create the letter buttons in the keys box area 
 //create keys
-/**
- * @param {createKey} letter function to create a key. Style the background red. Function call extra functionality when need the letter button click to call the revealNextPart
- * @returns 
- */
-function createKey(letter){
-    console.log('getting this far')
-    let key = document.createElement('span')
-    key.className = 'key'
-    key.textContent = letter;
-/**
- * Event listener on Key to turn red when clicked and to call the checkAndHighlightLetter function
- */
-    key.addEventListener('click', function(event){
-        key.style.backgroundColor = 'red';
-        checkAndHighlightLetter(letter);
-          
-    })
-    return key;
-    
-}
+
 
 /**
  * createLetterForKeys function to create the letters, put the letters into the key from createKay
@@ -185,6 +166,28 @@ let getLetters = document.getElementById('getLetters')
             getLetters.addEventListener('click', createLettersForKeys)
 
 
+/**
+ * @param {createKey} letter function to create a key. Style the background red. Function call extra functionality when need the letter button click to call the revealNextPart
+ * @returns 
+ */
+function createKey(letter){
+    console.log('getting this far')
+    let key = document.createElement('span')
+    key.className = 'key'
+    key.textContent = letter;
+/**
+ * Event listener on Key to turn red when clicked and to call the checkAndHighlightLetter function
+ */
+    key.addEventListener('click', function(event){
+        key.style.backgroundColor = 'red';
+        checkAndHighlightLetter(letter);
+          
+    })
+    return key;
+    
+}
+
+
 // push the letters from the random array into the underline div. made letters white in css  so cant see in div until it turns to blue and add to the eventlistener
 /**
  * 
@@ -201,20 +204,17 @@ function checkAndHighlightLetter(clickedLetter){
             existingDiv.style.backgroundColor = 'blue'
            
             console.log('pressed the right key')
+            /**Working to here */
             
-        } else if(existingDiv && letterButton !== clickedLetter){
-                
-            for (let i = 0; i <letterButton.length; i++){
-            letterButton[i].addEventListener('click', revealNextPart)
+        } 
 
-            console.log('pressed the wrong key')
         }
       
     }     
    
 
-}
 
-}
+
+
 
 
