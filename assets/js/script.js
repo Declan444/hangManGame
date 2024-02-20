@@ -101,7 +101,7 @@ function revealNextPart(){
 
 // create an array that contains 5 letter words
 
-let fiveLetterWords = ['chair', 'table', 'apple', 'house', 'style']
+let fiveLetterWords = ['apple']
 // function to randomly select a word from the array
 function getRandomWord(){
     let randomWordIndex = Math.floor(Math.random() * fiveLetterWords.length);
@@ -197,7 +197,7 @@ function checkAndHighlightLetter(clickedLetter){
             console.log('pressed the right key')
             letterMatched = true;
             /**Working to here */
-            break;
+            /*break;*/
         } else{
             
             console.log('pressed the wrong button')
