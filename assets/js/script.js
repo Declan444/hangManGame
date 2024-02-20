@@ -2,7 +2,6 @@
 
 
 
-
 //used W3 Schools to work out how to draw the stickman
 const canvas = document.getElementById('stickmanCanvas');
 const draw = canvas.getContext("2d");
@@ -219,6 +218,14 @@ function checkAndHighlightLetter(clickedLetter){
         }
 
        
+       function resetGame(){
+        console.log('does it call the reset function')
+        location.reload()
+       }
+       
+       
+
+
 
 
 
