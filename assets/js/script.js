@@ -1,3 +1,8 @@
+
+
+
+
+
 //used W3 Schools to work out how to draw the stickman
 const canvas = document.getElementById('stickmanCanvas');
 const draw = canvas.getContext("2d");
@@ -200,7 +205,9 @@ function checkAndHighlightLetter(clickedLetter){
             letterMatched = true;
             /**Working to here */
             /*break;*/
-        } else{
+        }
+            
+        else{
             
             console.log('pressed the wrong button')
         }
@@ -210,7 +217,7 @@ function checkAndHighlightLetter(clickedLetter){
         revealNextPart()
         }
         }
-      
+
        
 
 
