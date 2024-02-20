@@ -1,5 +1,10 @@
 
-
+function resetGame(){
+    console.log('does it call the reset function')
+    location.reload()
+   }
+   let reset = document.getElementById('reset')
+   reset.addEventListener('click', resetGame)
 
 
 //used W3 Schools to work out how to draw the stickman
@@ -218,12 +223,7 @@ function checkAndHighlightLetter(clickedLetter){
         }
 
        
-       function resetGame(){
-        console.log('does it call the reset function')
-        location.reload()
-       }
-       let reset = document.getElementById('reset')
-       reset.addEventListener('click', resetGame)
+       
        
        
 
