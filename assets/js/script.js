@@ -1,6 +1,6 @@
 
 function resetGame(){
-    console.log('does it call the reset function')
+    console.log('calling resetGame function')
     location.reload()
    }
    let reset = document.getElementById('reset')
@@ -84,7 +84,7 @@ draw.stroke()
 function revealNextPart(){
     if(!bodyPart.scaffold){
         bodyPart.scaffold = true;
-        console.log(' to check if calling this function')
+        
     }else if (!bodyPart.head){
         bodyPart.head = true;
     }else if (!bodyPart.body){
@@ -152,7 +152,7 @@ for(let i=0; i< randomWordArray.length; i++){
  * createLetterForKeys function to create the letters, put the letters into the key from createKay
  */
 function  createLettersForKeys(){
-    console.log('calling create letter for keys function')
+    
     let letters = []
 
     for (let i=97; i <= 122; i++){
@@ -163,12 +163,12 @@ let keysBox = document.getElementById('keys-box')
 for (let i = 0; i < letters.length; i++){
     let keys = createKey(letters[i]);
     keysBox.appendChild(keys)
-    console.log('did it get to here')
+    
 }
     
 }
-let getLetters = document.getElementById('getLetters')
-            getLetters.addEventListener('click', createLettersForKeys)
+/*let getLetters = document.getElementById('getLetters')
+    getLetters.addEventListener('click', createLettersForKeys)*/
 
 
 /**
@@ -176,7 +176,7 @@ let getLetters = document.getElementById('getLetters')
  * @returns 
  */
 function createKey(letter){
-    console.log('getting this far')
+    
     let key = document.createElement('span')
     key.className = 'key'
     key.textContent = letter;
@@ -205,16 +205,13 @@ function checkAndHighlightLetter(clickedLetter){
         if(existingDiv && randomLetter === clickedLetter){
             existingDiv.style.backgroundColor = 'blue'
            
-            console.log('pressed the right key')
+            
             letterMatched = true;
             /**Working to here */
             /*break;*/
         }
             
-        else{
-            
-            console.log('pressed the wrong button')
-        }
+        
         
         }
         if(!letterMatched){
