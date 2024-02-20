@@ -3,12 +3,18 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+
+    display: block;
+    
+}
 
 #outer-container{
     display: flex;
     flex-direction: column;
     background-color: brown;
     height: auto;
+    width: 900px;
     
 }
 
@@ -82,7 +88,7 @@
 #keys-box{
     display: flex;
     flex-wrap: wrap;
-    width: 300px;
+    width: 443px;
     height: auto;
     margin: 5px;
     background-color: aquamarine;

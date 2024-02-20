@@ -88,6 +88,8 @@ function revealNextPart(){
         bodyPart.leftLeg = true;
     }else if (!bodyPart.rightLeg){
         bodyPart.rightLeg = true;
+    }else{
+        alert('Sorry you killed him :(')
     }
     
     drawStickman(bodyPart)
