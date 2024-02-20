@@ -5,7 +5,7 @@
 }
 body{
 
-    display: block;
+    display: inline-flex;
     
 }
 
@@ -20,10 +20,11 @@ body{
 
 #game-text{
     display: flex;
-    background-color: #eb8282;
+    background-color: bisque;
     flex-direction: column;
     text-align: center;
     margin: 5px;
+    padding-bottom: 10px;
     
 }
 
@@ -48,6 +49,7 @@ body{
     width: 300px;
     background-color: #f0f0f0;
     border-bottom: 5px solid #ccc;
+    margin-top: 25px;
 }
 
 #game{
@@ -88,11 +90,12 @@ body{
 #keys-box{
     display: flex;
     flex-wrap: wrap;
-    width: 443px;
+    width: auto;
     height: auto;
     margin: 5px;
     background-color: aquamarine;
-    justify-self: center;
+    
+    max-width: 600px;
     
 }
 
@@ -110,3 +113,7 @@ body{
     
 }
 
+#reset{
+    box-shadow: 5px 5px 5px rgb(8, 100, 131);
+    padding: 5px;
+}

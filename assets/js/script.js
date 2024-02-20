@@ -20,7 +20,8 @@ let bodyPart ={
     leftArm: false,
     rightArm: false,
     leftLeg: false,
-    rightLeg: false
+    rightLeg: false,
+    dead:false
 
 }
 /**
@@ -78,6 +79,12 @@ draw.moveTo(150, 150)
 draw.lineTo(200, 200)
 draw.stroke()
 }
+if(bodyPart.dead){
+    draw.moveTo(100, 75)
+    draw.lineTo(200, 75)
+    draw.strokeStyle = 'red'
+    draw.stroke()
+}
 }
 /**revealNextPart function uses an if statement to reveal each bodyPart and then call the function
  */
@@ -97,6 +104,9 @@ function revealNextPart(){
         bodyPart.leftLeg = true;
     }else if (!bodyPart.rightLeg){
         bodyPart.rightLeg = true;
+    }else if(!bodyPart.dead){
+        bodyPart.dead = true;
+        
     }else{
         alert('Sorry you killed him :(')
     }
