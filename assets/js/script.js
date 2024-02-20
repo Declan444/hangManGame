@@ -92,13 +92,7 @@ function revealNextPart(){
     
     drawStickman(bodyPart)
 }
-/**
- * revealButton just put in place to check if the stickman reveal would work. To be removed later and replaced by click of alphabet letter
- */
-let revealButton = document.getElementById('revealButton')
-revealButton.addEventListener('click', revealNextPart)
 
-console.log('testing again')
 
 
 /**
@@ -183,18 +177,15 @@ function createKey(letter){
         checkAndHighlightLetter(letter);
           
     })
-    return key;
-    
+    return key;   
 }
-
-
 // push the letters from the random array into the underline div. made letters white in css  so cant see in div until it turns to blue and add to the eventlistener
 /**
  * 
- * @param {checkAndHighlightLetter} clickedLetter function to check if the letter selected is in the array then it changes the div to blue and highlights the letter.
+ * @param {checkAndHighlightLetter} clickedLetter function to check if the letter selected is in the array then it changes the div to blue and highlights the letter. Also to call the revealNextPart function if fased
  */
 function checkAndHighlightLetter(clickedLetter){
-    
+    let letterMatched = false;
     for(let i = 0; i < randomWordArray.length; i++){
         let existingDiv = document.getElementById('letter-' + (i + 1));
         let randomLetter = randomWordArray[i]
@@ -204,14 +195,22 @@ function checkAndHighlightLetter(clickedLetter){
             existingDiv.style.backgroundColor = 'blue'
            
             console.log('pressed the right key')
+            letterMatched = true;
             /**Working to here */
+            break;
+        } else{
             
-        } 
-
+            console.log('pressed the wrong button')
+        }
+        
+        }
+        if(!letterMatched){
+        revealNextPart()
+        }
         }
       
-    }     
-   
+       
+
 
 
 
