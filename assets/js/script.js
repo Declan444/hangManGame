@@ -222,6 +222,8 @@ function checkAndHighlightLetter(clickedLetter){
         console.log('does it call the reset function')
         location.reload()
        }
+       let reset = document.getElementById('reset')
+       reset.addEventListener('click', resetGame)
        
        
 
