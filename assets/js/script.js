@@ -122,7 +122,7 @@ function revealNextPart(){
 
 // create an array that contains 5 letter words
 
-let fiveLetterWords = ['apple']
+let fiveLetterWords = ['apple', 'table', 'chair', 'press', 'style']
 // function to randomly select a word from the array
 function getRandomWord(){
     let randomWordIndex = Math.floor(Math.random() * fiveLetterWords.length);
@@ -207,19 +207,19 @@ function createKey(letter){
  */
 function checkAndHighlightLetter(clickedLetter){
     let letterMatched = false;
+    let selectedLettersArray = []
     for(let i = 0; i < randomWordArray.length; i++){
         let existingDiv = document.getElementById('letter-' + (i + 1));
         let randomLetter = randomWordArray[i]
-    
+        
 
         if(existingDiv && randomLetter === clickedLetter){
             existingDiv.style.backgroundColor = 'blue'
            
             
             letterMatched = true;
-            /**Working to here */
-            /*break;*/
-        }
+           
+        } 
             
         
         
@@ -227,6 +227,7 @@ function checkAndHighlightLetter(clickedLetter){
         if(!letterMatched){
         revealNextPart()
         }
+        
         }
 
        
