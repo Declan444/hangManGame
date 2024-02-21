@@ -235,10 +235,34 @@ function checkAndHighlightLetter(clickedLetter){
         clickedLettersArray.push(...letter)
         console.log(clickedLettersArray)
 
+        return clickedLettersArray
+
        
     }
+
+    function areArraysEqual(clickedLettersArray, randomWordArray){
+        if (clickedLettersArray.length !== randomWordArray.length){
+        return false
+    }
+    return clickedLettersArray.every(letter => randomWordArray.includes(letter))
+    }
+
+    if(areArraysEqual(clickedLettersArray, randomWordArray)){
+        alert('Congratulations you have saved the man. Well done Martin')
     
+    }
 }
+
+
+
+
+
+
+
+
+/**
+ * function to iterate over the clickedLettersArray
+ */
     
     
         
