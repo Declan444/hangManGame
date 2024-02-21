@@ -108,7 +108,7 @@ function revealNextPart(){
         bodyPart.dead = true;
         
     }else{
-        alert('Sorry you killed him :(')
+        alert('Martin you killed me :(')
     }
     
     drawStickman(bodyPart)
@@ -205,9 +205,11 @@ function createKey(letter){
  * 
  * @param {checkAndHighlightLetter} clickedLetter function to check if the letter selected is in the array then it changes the div to blue and highlights the letter. Also to call the revealNextPart function if fased
  */
+let clickedLettersArray = []
+
 function checkAndHighlightLetter(clickedLetter){
     let letterMatched = false;
-    let selectedLettersArray = []
+    
     for(let i = 0; i < randomWordArray.length; i++){
         let existingDiv = document.getElementById('letter-' + (i + 1));
         let randomLetter = randomWordArray[i]
@@ -221,14 +223,26 @@ function checkAndHighlightLetter(clickedLetter){
            
         } 
             
-        
-        
         }
         if(!letterMatched){
         revealNextPart()
         }
         
-        }
+        handleClickedLetter(clickedLetter)
+
+       
+       function handleClickedLetter(letter){
+        clickedLettersArray.push(...letter)
+        console.log(clickedLettersArray)
+
+       
+    }
+    
+}
+    
+    
+        
+                
 
        
        
