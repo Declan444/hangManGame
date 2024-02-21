@@ -252,7 +252,7 @@ function checkAndHighlightLetter(clickedLetter){
     }
 
     if(areArraysEqual(randomWordArray, clickedLettersArray)){
-        alert('Congratulations you have saved the man. Well done Martin. The word was ')
+        alert('Congratulations you have saved the man. Well done Martin. The word was...... ' + randomWordArray.join('').toUpperCase())
     
     }
 }
