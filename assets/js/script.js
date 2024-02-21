@@ -236,19 +236,23 @@ function checkAndHighlightLetter(clickedLetter){
         console.log(clickedLettersArray)
 
         return clickedLettersArray
-
-       
+   
     }
-
-    function areArraysEqual(clickedLettersArray, randomWordArray){
-        if (clickedLettersArray.length !== randomWordArray.length){
+/**
+ * 
+ * @param {*} clickedLettersArray an array to store the clicked letters
+ * @param {*} randomWordArray an array to store the random word selected
+ * @returns checks if the letters contained in the clickedLettersArray are in the randomWordArray and if they all are, returns the win alert
+ */
+    function areArraysEqual(randomWordArray, clickedLettersArray){
+        if (randomWordArray.length !== clickedLettersArray.length){
         return false
     }
-    return clickedLettersArray.every(letter => randomWordArray.includes(letter))
+    return randomWordArray.every(letter => clickedLettersArray.includes(letter))
     }
 
-    if(areArraysEqual(clickedLettersArray, randomWordArray)){
-        alert('Congratulations you have saved the man. Well done Martin')
+    if(areArraysEqual(randomWordArray, clickedLettersArray)){
+        alert('Congratulations you have saved the man. Well done Martin. The word was ')
     
     }
 }
