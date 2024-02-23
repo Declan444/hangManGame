@@ -244,8 +244,9 @@ function checkAndHighlightLetter(clickedLetter){
  * 
  * @param {*} clickedLettersArray an array to store the clicked letters
  * @param {*} randomWordArray an array to store the random word selected
- * @returns checks if the letters contained in the clickedLettersArray are in the randomWordArray and if they all are, returns the win alert
- */
+ * areArraysEqual check if all letters in the randomWordArray are present in the clickedLettersArray and if are, returns the win alert
+
+ */ 
     function areArraysEqual(randomWordArray, clickedLettersArray){
         let alllettersPresent = randomWordArray.every(letter => clickedLettersArray.includes(letter));
 
