@@ -108,7 +108,7 @@ function revealNextPart(){
         bodyPart.dead = true;
         
     }else{
-        alert('Martin you killed me :(')
+        alert('You killed me :(  The correct word was .....' + randomWordArray.join().toUpperCase());
     }
     
     drawStickman(bodyPart)
