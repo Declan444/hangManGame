@@ -276,6 +276,14 @@ function checkAndHighlightLetter(clickedLetter){
             f +=1
             g +=1
             draw.clearRect(0, 0, canvas.width, canvas.height);
+            //scaffold
+            draw.beginPath()
+            draw.moveTo(40, 230);
+            draw.lineTo(10, 230)
+            draw.lineTo(10, 10)
+            draw.lineTo(150, 10)
+            draw.lineTo(150, 25)
+            draw.stroke();
         // Draw head
         draw.beginPath();
         draw.arc(150, x, 25, 0, 2 * Math.PI);
