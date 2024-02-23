@@ -250,7 +250,7 @@ function checkAndHighlightLetter(clickedLetter){
         let alllettersPresent = randomWordArray.every(letter => clickedLettersArray.includes(letter));
 
         if(alllettersPresent){
-            console.log('you win')
+            alert('Congratulations you saved the man')
         }else{
            console.log('not all letters present') 
         }
