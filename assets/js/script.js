@@ -251,11 +251,86 @@ function checkAndHighlightLetter(clickedLetter){
         let alllettersPresent = randomWordArray.every(letter => clickedLettersArray.includes(letter));
 
         if(alllettersPresent){
-            alert('Congratulations you saved the man')
-        }else{
-           console.log('not all letters present') 
+           
+            const canvas = document.getElementById('stickmanCanvas');
+    const draw = canvas.getContext("2d");
+       
+
+        let x = 50
+        let y = 75
+        let a = 150
+        let b = 100
+        let c = 100
+        let d = 150
+        let e = 200
+        let f = 150
+        let g = 200
+        function loop() {
+            x +=1
+            y +=1
+            a +=1
+            b +=1
+            c +=1
+            d +=1
+            e +=1
+            f +=1
+            g +=1
+            draw.clearRect(0, 0, canvas.width, canvas.height);
+        // Draw head
+        draw.beginPath();
+        draw.arc(150, x, 25, 0, 2 * Math.PI);
+        draw.stroke()
+        // Draw smile
+        draw.beginPath();
+        draw.arc(150, x + 5, 15, 0.2 * Math.PI, 0.8 * Math.PI);
+        draw.stroke();
+
+        // Draw eyes
+        draw.beginPath();
+        draw.arc(140, x - 5, 2, 0, 2 * Math.PI);
+        draw.stroke();
+
+        draw.beginPath();
+        draw.arc(160, x - 5, 2, 0, 2 * Math.PI);
+        draw.stroke();
+        // Draw body
+        draw.moveTo(150, y)
+        draw.lineTo(150, a)
+        draw.stroke()
+        //Draw right Arm
+        draw.moveTo(150, b)
+        draw.lineTo(100, 100)
+        draw.stroke()
+        //Draw left arm
+        draw.moveTo(150,c)
+        draw.lineTo(200, 100)
+        draw.stroke()
+        //Draw left leg
+        draw.moveTo(150,d)
+        draw.lineTo(100, e)
+        draw.stroke()
+        //Draw right leg
+        draw.moveTo(150, f)
+        draw.lineTo(200, g)
+        draw.stroke()
+
+        if (x < 100){
+            window.requestAnimationFrame(loop)
         }
-}
+        
+    
+        }
+        window.requestAnimationFrame(loop)  
+        alert('Congratulations you saved the man')  
+
+        //2D Animations with Canvas and JavaScript  Kyle Robinson Young Youtube video
+       
+        
+
+
+    
+ 
+    
 
 
 
@@ -267,12 +342,22 @@ function checkAndHighlightLetter(clickedLetter){
 
 
 
-/**
- * function to iterate over the clickedLettersArray
- */
+
     
     
         
+        }else{
+           console.log('not all letters present') 
+        }
+        
+}
+
+
+        
+  
+
+
+
                 
 
        
