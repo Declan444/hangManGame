@@ -334,25 +334,6 @@ function checkAndHighlightLetter(clickedLetter){
         //2D Animations with Canvas and JavaScript  Kyle Robinson Young Youtube video
        
         
-
-
-    
- 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
         
         }else{
            console.log('not all letters present') 
