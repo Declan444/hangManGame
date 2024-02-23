@@ -78,8 +78,7 @@ body{
     border-bottom: 2px solid black;
     margin: 5px;
     text-align: center;
-    color: rgb(241, 236, 236);
-    
+    color: bisque
 }
 #keys-outer-box{
     display: flex;
