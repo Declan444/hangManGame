@@ -29,7 +29,9 @@ const canvas = document.getElementById('stickmanCanvas');
             e +=1
             f +=1
             g +=1
-            draw.clearRect(0, 0, canvas.width, canvas.height);
+            draw.fillStyle= 'red'
+            draw.fillRect(0,0, canvas.width, canvas.height)
+           
             draw.beginPath()
 draw.moveTo(40, 230);
 draw.lineTo(10, 230)
@@ -39,21 +41,29 @@ draw.lineTo(150, 25)
 draw.stroke();
         // Draw head
         draw.beginPath();
-        draw.arc(150, x, 25, 0, 2 * Math.PI);
+        draw.arc(150, 50, 25, 0, 2 * Math.PI);
         draw.stroke()
         // Draw smile
         draw.beginPath();
-        draw.arc(150, x + 5, 15, 0.2 * Math.PI, 0.8 * Math.PI);
-        draw.stroke();
+draw.arc(150, 50 +13, 11, 1 * Math.PI, 2.0 * Math.PI); // Updated end angle to make the smile turn down
+draw.stroke();
 
         // Draw eyes
         draw.beginPath();
-        draw.arc(140, x - 5, 2, 0, 2 * Math.PI);
-        draw.stroke();
+draw.moveTo(138, 50 - 7);
+draw.lineTo(142, 50 - 3);
+draw.moveTo(138, 50 - 3);
+draw.lineTo(142, 50 - 7);
+draw.stroke();
 
-        draw.beginPath();
-        draw.arc(160, x - 5, 2, 0, 2 * Math.PI);
-        draw.stroke();
+draw.beginPath();
+draw.moveTo(158, 50 - 7);
+draw.lineTo(162, 50 - 3);
+draw.moveTo(158, 50 - 3);
+draw.lineTo(162, 50 - 7);
+draw.stroke();
+
+    
         // Draw body
         draw.moveTo(150, y)
         draw.lineTo(150, a)
@@ -75,12 +85,16 @@ draw.stroke();
         draw.lineTo(200, g)
         draw.stroke()
 
+       
+
         if (x < 100){
             window.requestAnimationFrame(loop)
         }
-        
-    
+           
         }
+        
+       
+        
         window.requestAnimationFrame(loop)    
 </script>        
 

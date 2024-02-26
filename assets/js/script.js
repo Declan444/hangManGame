@@ -108,11 +108,38 @@ function revealNextPart(){
         bodyPart.dead = true;
         
     }else{
+
+        
+    
+
+
         alert('You killed me :(  The correct word was .....' + randomWordArray.join().toUpperCase());
+
+       
     }
+
+    /*const canvas = document.getElementById('stickmanCanvas');
+    const draw = canvas.getContext("2d");*/
+    
+
+        
+
+
+    
+ 
+    
+
+  
     
     drawStickman(bodyPart)
 }
+
+        
+        
+       
+        
+        
+        
 
 
 
@@ -339,6 +366,20 @@ function checkAndHighlightLetter(clickedLetter){
            console.log('not all letters present') 
         }
         
+}
+
+function youLost(){
+    const canvas = document.getElementById('stickmanCanvas');
+    const draw = canvas.getContext("2d");
+    
+
+   
+        
+       
+        
+        window.requestAnimationFrame(loop)    
+      
+
 }
 
 
