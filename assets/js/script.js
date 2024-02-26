@@ -149,7 +149,7 @@ function revealNextPart(){
 
 // create an array that contains 5 letter words
 
-let fiveLetterWords = ['black', 'clock', 'brown', 'blast', 'stick', 'stamp', 'disty']
+let fiveLetterWords = ['black', 'clock', 'brown', 'blast', 'stick', 'stamp', 'disty', 'child', 'style', 'frame', 'mucky', 'banjo']
 // function to randomly select a word from the array
 function getRandomWord(){
     let randomWordIndex = Math.floor(Math.random() * fiveLetterWords.length);
