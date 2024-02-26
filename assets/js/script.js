@@ -113,7 +113,7 @@ function revealNextPart(){
     
 
 
-        alert('You killed me :(  The correct word was .....' + randomWordArray.join().toUpperCase());
+        alert('Ah jasus Colette, you fucking killed me. Where is Gerard when you need him :(  The correct word was .....' + randomWordArray.join().toUpperCase());
 
        
     }
@@ -356,7 +356,7 @@ function checkAndHighlightLetter(clickedLetter){
     
         }
         window.requestAnimationFrame(loop)  
-        alert('Congratulations you saved the man')  
+        alert('Would you fuck off. Deffo Gerard helped you. Not a hope that someone from Stradbally could figure this out... ')  
 
         //2D Animations with Canvas and JavaScript  Kyle Robinson Young Youtube video
        
