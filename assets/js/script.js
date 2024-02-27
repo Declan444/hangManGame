@@ -20,9 +20,8 @@ let bodyPart ={
     leftArm: false,
     rightArm: false,
     leftLeg: false,
-    rightLeg: false,
-    dead:false
-
+    rightLeg: false
+    
 }
 /**
  * 
@@ -46,9 +45,6 @@ draw.beginPath();
 draw.arc(150, 50, 25, 0, 2 * Math.PI);
 draw.stroke()
 }
-
-
-
 //Body
 if(bodyPart.body){
 draw.moveTo(150, 75)
@@ -79,19 +75,13 @@ draw.moveTo(150, 150)
 draw.lineTo(200, 200)
 draw.stroke()
 }
-if(bodyPart.dead){
-    draw.moveTo(100, 75)
-    draw.lineTo(200, 75)
-    draw.strokeStyle = 'red'
-    draw.stroke()
 }
-}
-/**revealNextPart function uses an if statement to reveal each bodyPart and then call the function
+/*
+*revealNextPart function uses an if statement to reveal each bodyPart and then call the function
  */
 function revealNextPart(){
     if(!bodyPart.scaffold){
-        bodyPart.scaffold = true;
-        
+        bodyPart.scaffold = true;     
     }else if (!bodyPart.head){
         bodyPart.head = true;
     }else if (!bodyPart.body){
@@ -103,45 +93,106 @@ function revealNextPart(){
     }else if (!bodyPart.leftLeg){
         bodyPart.leftLeg = true;
     }else if (!bodyPart.rightLeg){
-        bodyPart.rightLeg = true;
-    }else if(!bodyPart.dead){
-        bodyPart.dead = true;
-        
+        bodyPart.rightLeg = true;    
     }else{
 
-        
+        const canvas = document.getElementById('stickmanCanvas');
+    const draw = canvas.getContext("2d");
+    
+
+        let x = 50
+        let y = 75
+        let a = 150
+        let b = 100
+        let c = 100
+        let d = 150
+        let e = 200
+        let f = 150
+        let g = 200
+        function loop() {
+            x +=1
+            y +=1
+            a +=1
+            b +=1
+            c +=1
+            d +=1
+            e +=1
+            f +=1
+            g +=1
+            draw.fillStyle= 'red'
+            draw.fillRect(0,0, canvas.width, canvas.height)
+           
+            draw.beginPath()
+draw.moveTo(40, 230);
+draw.lineTo(10, 230)
+draw.lineTo(10, 10)
+draw.lineTo(150, 10)
+draw.lineTo(150, 25)
+draw.stroke();
+        // head
+        draw.beginPath();
+        draw.arc(150, 50, 25, 0, 2 * Math.PI);
+        draw.stroke()
+        // smile
+        draw.beginPath();
+draw.arc(150, 50 +13, 11, 1 * Math.PI, 2.0 * Math.PI); // Updated end angle to make the smile turn down
+draw.stroke();
+
+        // eyes
+        draw.beginPath();
+draw.moveTo(138, 50 - 7);
+draw.lineTo(142, 50 - 3);
+draw.moveTo(138, 50 - 3);
+draw.lineTo(142, 50 - 7);
+draw.stroke();
+
+draw.beginPath();
+draw.moveTo(158, 50 - 7);
+draw.lineTo(162, 50 - 3);
+draw.moveTo(158, 50 - 3);
+draw.lineTo(162, 50 - 7);
+draw.stroke();
+
+    
+        // body
+        draw.moveTo(150, y)
+        draw.lineTo(150, a)
+        draw.stroke()
+        //right Arm
+        draw.moveTo(150, b)
+        draw.lineTo(100, 100)
+        draw.stroke()
+        // left arm
+        draw.moveTo(150,c)
+        draw.lineTo(200, 100)
+        draw.stroke()
+        // left leg
+        draw.moveTo(150,d)
+        draw.lineTo(100, e)
+        draw.stroke()
+        // right leg
+        draw.moveTo(150, f)
+        draw.lineTo(200, g)
+        draw.stroke()
+
+       
+
+        if (x < 100){
+            window.requestAnimationFrame(loop)
+        }
+           
+        }
+        window.requestAnimationFrame(loop)  
     
 
 
-        alert('Ah jasus Colette, you fucking killed me. Where is Gerard when you need him :(  The correct word was .....' + randomWordArray.join().toUpperCase());
+        alert('Sorry but you just killed the poor man :(  The correct word was .....' + randomWordArray.join('').toUpperCase());
 
        
     }
-
-    /*const canvas = document.getElementById('stickmanCanvas');
-    const draw = canvas.getContext("2d");*/
-    
-
-        
-
-
-    
- 
-    
-
-  
     
     drawStickman(bodyPart)
 }
-
-        
-        
-       
-        
-        
-        
-
-
 
 /**
  * getRandomWord function to randomely select a word from the array. return it as an array and assign it to selectedWord
@@ -149,7 +200,7 @@ function revealNextPart(){
 
 // create an array that contains 5 letter words
 
-let fiveLetterWords = ['black', 'clock', 'brown', 'blast', 'stick', 'stamp', 'disty', 'child', 'style', 'frame', 'mucky', 'banjo']
+let fiveLetterWords = ['black', 'clock', 'brown', 'blast', 'stick', 'stamp', 'disty', 'child', 'style', 'frame', 'mucky', 'banjo', 'rythm']
 // function to randomly select a word from the array
 function getRandomWord(){
     let randomWordIndex = Math.floor(Math.random() * fiveLetterWords.length);
@@ -172,19 +223,13 @@ console.log(randomWordArray)
 
 for(let i=0; i< randomWordArray.length; i++){
     let existingDiv = document.getElementById('letter-' + (i + 1))
-    /*let randomLetter = randomWordArray[i]*/
-    if (existingDiv){
+       if (existingDiv){
         existingDiv.textContent = randomWordArray[i];  
     }
 
 }
-
-
-
 //trying to create the letter buttons in the keys box area 
 //create keys
-
-
 /**
  * createLetterForKeys function to create the letters, put the letters into the key from createKay
  */
@@ -311,16 +356,16 @@ function checkAndHighlightLetter(clickedLetter){
             draw.lineTo(150, 10)
             draw.lineTo(150, 25)
             draw.stroke();
-        // Draw head
+        // head
         draw.beginPath();
         draw.arc(150, x, 25, 0, 2 * Math.PI);
         draw.stroke()
-        // Draw smile
+        // smile
         draw.beginPath();
         draw.arc(150, x + 5, 15, 0.2 * Math.PI, 0.8 * Math.PI);
         draw.stroke();
 
-        // Draw eyes
+        // eyes
         draw.beginPath();
         draw.arc(140, x - 5, 2, 0, 2 * Math.PI);
         draw.stroke();
@@ -328,23 +373,23 @@ function checkAndHighlightLetter(clickedLetter){
         draw.beginPath();
         draw.arc(160, x - 5, 2, 0, 2 * Math.PI);
         draw.stroke();
-        // Draw body
+        // body
         draw.moveTo(150, y)
         draw.lineTo(150, a)
         draw.stroke()
-        //Draw right Arm
+        //right Arm
         draw.moveTo(150, b)
         draw.lineTo(100, 100)
         draw.stroke()
-        //Draw left arm
+        // left arm
         draw.moveTo(150,c)
         draw.lineTo(200, 100)
         draw.stroke()
-        //Draw left leg
+        // left leg
         draw.moveTo(150,d)
         draw.lineTo(100, e)
         draw.stroke()
-        //Draw right leg
+        //right leg
         draw.moveTo(150, f)
         draw.lineTo(200, g)
         draw.stroke()
@@ -352,11 +397,9 @@ function checkAndHighlightLetter(clickedLetter){
         if (x < 100){
             window.requestAnimationFrame(loop)
         }
-        
-    
         }
         window.requestAnimationFrame(loop)  
-        alert('Would you fuck off. Deffo Gerard helped you. Not a hope that someone from Stradbally could figure this out... ')  
+        alert('Congratulations you just saved the poor man from the mouth of death. Well done, you deserve a drink....... ')  
 
         //2D Animations with Canvas and JavaScript  Kyle Robinson Young Youtube video
        
@@ -371,15 +414,9 @@ function checkAndHighlightLetter(clickedLetter){
 function youLost(){
     const canvas = document.getElementById('stickmanCanvas');
     const draw = canvas.getContext("2d");
-    
-
-   
-        
        
-        
         window.requestAnimationFrame(loop)    
       
-
 }
 
 

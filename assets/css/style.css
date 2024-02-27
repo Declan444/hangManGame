@@ -5,7 +5,7 @@
 }
 body{
 
-    display: inline-flex;
+    display: grid;
     
 }
 
@@ -109,7 +109,8 @@ body{
     padding: 10px;
     margin: 5px;
     box-shadow: 5px 5px 5px rgb(8, 100, 131);
-    
+    font-weight: bold;
+    font-size: larger;
 }
 
 #reset{
