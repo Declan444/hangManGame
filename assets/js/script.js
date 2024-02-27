@@ -399,7 +399,7 @@ function checkAndHighlightLetter(clickedLetter){
         }
         }
         window.requestAnimationFrame(loop)  
-        alert('Congratulations you just saved the poor man from the mouth of death. Well done, you deserve a drink....... ')  
+        alert('Congratulations you just saved the poor man from the jaws of death. Well done, you deserve a drink....... ')  
 
         //2D Animations with Canvas and JavaScript  Kyle Robinson Young Youtube video
        
