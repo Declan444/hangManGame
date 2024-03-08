@@ -4,8 +4,15 @@ The Hangman Game is designed to ask the player to try to solve the 5 letter word
 
 Images of game on different screens here
 
+![image](https://github.com/Declan444/hangManGame/assets/119152450/a7ca77dd-bcd7-4a3d-b301-dbe1ca896b54)
+
+
 
 ![image](https://github.com/Declan444/hangManGame/assets/119152450/a4d51274-6e2c-4fad-adaa-43e85c7cbc6a)
+
+![image](https://github.com/Declan444/hangManGame/assets/119152450/2ae1a4eb-d60a-4c29-ab47-f5fa64931eba)
+
+![image](https://github.com/Declan444/hangManGame/assets/119152450/c63608fb-20ea-4b29-9097-7d3f30327671)
 
 
 
