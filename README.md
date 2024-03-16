@@ -11,15 +11,32 @@ The layout of the game is primarily made for phone screen as this is how people 
 
 ## Features
 
-The top of the viewing area has four simple instructions on how to play the game. This is followed by an empty canvas which is a white area. Underneath this area is an area, highlighed with 5 underlines. This is where the letters will appear in blue backfround with light colour text for contrast if the correct letter is selected. Underneath this area is the key pad that the user uses to select which letter they want to select. A larger button NEW GAME is placed in the top left corner of the keypad which resets the game and the user can try again. 
+The top of the viewing area has four simple instructions on how to play the game. 
+![image](https://github.com/Declan444/hangManGame/assets/119152450/23ca8b67-3226-41b6-9799-17ac3a5b6e9f)
+
+This is followed by an empty canvas which is a white area. Underneath this area is an area, highlighed with 5 underlines. 
+![image](https://github.com/Declan444/hangManGame/assets/119152450/cd32b133-0d66-485e-b8e0-9a11f9fad601)
+
+This is where the letters will appear in blue backfround with light colour text for contrast if the correct letter is selected.
+![image](https://github.com/Declan444/hangManGame/assets/119152450/5eb58856-4ca0-4aeb-b13a-edb7b550d51c)
+
+Underneath this area is the key pad that the user uses to select which letter they want to select. A larger button NEW GAME is placed in the top left corner of the keypad which resets the game and the user can try again. 
+![image](https://github.com/Declan444/hangManGame/assets/119152450/faca6624-67ec-4045-9e81-88b997f4d070)
+
 
 When a user selects a letter, if the correct is selected, this letter appears with a blue background at one of the underlined spaces. The letter appears where it appears in the correct word. If there are two of the same correct letters in the word, both letters appear in the word in their correct position. This key turns red on the keypad to indicate that this letter has been selected.
+![image](https://github.com/Declan444/hangManGame/assets/119152450/1f08f9c2-970d-40f9-9c1c-f6c71626f6d8)
+
+
 
 If the user selects an incorrect letter, the letter that they have selected in the key pad turns red to indicated that this letter has been selected. A part of the hangman also appears within the canvas. 
+![image](https://github.com/Declan444/hangManGame/assets/119152450/b5995305-5ad3-436b-a20d-f2b63a58f7ce)
 
 If the user correctly selects all the letters in the word, thereby winning the game, an alert is given to the screen with congratulations to the user for saving the man. When they click ok on the alert, the man falls from the gallows with his head in tact and a smile on his face. 
+![image](https://github.com/Declan444/hangManGame/assets/119152450/6848d439-ecdd-483e-be4a-9f81a5deefd5)
 
 If the user can not solve the word, an alert is sent to the screen stating that the man has been killed, when they click ok on the alert, the body minus falls to the ground, the head makes a sad face and the background turns red. 
+![image](https://github.com/Declan444/hangManGame/assets/119152450/84301f5a-53e5-4f8c-98c5-6279fc03ae3d)
 
 The user can then click new game to start the process over again.
 
@@ -43,12 +60,14 @@ The game has been tested on laptops, wide screens and on various phone screens b
 
 ![image](https://github.com/Declan444/hangManGame/assets/119152450/a4d51274-6e2c-4fad-adaa-43e85c7cbc6a)
 
-
+## javascript validation to go here
 
 
 ## Lighthouse Testing
 
 ![image](https://github.com/Declan444/hangManGame/assets/119152450/c63608fb-20ea-4b29-9097-7d3f30327671)
+
+
 
 
 ## References
