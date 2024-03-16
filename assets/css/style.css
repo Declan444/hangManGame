@@ -100,7 +100,8 @@ body{
     background-color: aquamarine;
     max-width: 600px;
     padding-left: 15px;
-    
+    align-content: baseline;
+    height: auto;
 }
 
 .key{
