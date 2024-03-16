@@ -23,7 +23,19 @@ If the user can not solve the word, an alert is sent to the screen stating that 
 
 The user can then click new game to start the process over again.
 
-Images of game on different screens here
+## Footer
+
+The footer contains a copyright LA Research Labs 2024
+
+## Wireframe
+
+## Future Features
+Ideally with more time and development, the user would be asked to select the length of letters in the word that they want to play e.g. a 3 letter word, 4 letter word, 5 letter word etc. This would give the user more difficult challenges with the game. Also a suggestion by on user was to change the keypad to a qwerty layout.
+
+## Testing
+The game has been tested on laptops, wide screens and on various phone screens by a number of adults and children. The game worked as it should on all devices. 
+
+## Validator Testing
 
 ![image](https://github.com/Declan444/hangManGame/assets/119152450/a7ca77dd-bcd7-4a3d-b301-dbe1ca896b54)
 
@@ -31,12 +43,15 @@ Images of game on different screens here
 
 ![image](https://github.com/Declan444/hangManGame/assets/119152450/a4d51274-6e2c-4fad-adaa-43e85c7cbc6a)
 
-![image](https://github.com/Declan444/hangManGame/assets/119152450/2ae1a4eb-d60a-4c29-ab47-f5fa64931eba)
+
+
+
+## Lighthouse Testing
 
 ![image](https://github.com/Declan444/hangManGame/assets/119152450/c63608fb-20ea-4b29-9097-7d3f30327671)
 
 
-
+## References
 3. try to create a stickman on the canvas using js. Used (https://www.w3schools.com/graphics/canvas_drawing.asp) to figure it out.
 
 
