@@ -1,4 +1,4 @@
-
+/*jshint esversion: 6 */
 
 function resetGame() {
     console.log('calling resetGame function');
@@ -106,7 +106,8 @@ function resetGame() {
       let e = 200;
       let f = 150;
       let g = 200;
-      function loop() {
+
+function loop() {
         x += 1;
         y += 1;
         a += 1;
@@ -376,12 +377,13 @@ function resetGame() {
     } else {
       console.log('not all letters present');
     }
-  }
+    }
   
-  function youLost() {
+  
+  /*function youLost() {
     const canvas = document.getElementById('stickmanCanvas');
     const draw = canvas.getContext('2d');
   
     window.requestAnimationFrame();
-  }
+  }*/
   
