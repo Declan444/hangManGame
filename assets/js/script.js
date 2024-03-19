@@ -1,5 +1,7 @@
 /*jshint esversion: 6 */
-
+/**
+ * Reset game function
+ */
 function resetGame() {
     console.log('calling resetGame function');
     location.reload();
@@ -10,9 +12,8 @@ function resetGame() {
   // used W3 Schools to work out how to draw the stickman
   const canvas = document.getElementById('stickmanCanvas');
   const draw = canvas.getContext('2d');
-  /**
-   * BodyPart will be the object that contains all of the stickman sections. Set boolean to false to not appear on the canvas
-   */
+  //BodyPart will be the object that contains all of the stickman sections. Set boolean to false to not appear on the canvas
+   
   const bodyPart = {
     scaffold: false,
     head: false,
@@ -106,7 +107,9 @@ function resetGame() {
       let e = 200;
       let f = 150;
       let g = 200;
-
+/**
+ * loop function to animage the image and turn the background red when the player loses the game
+ */
 function loop() {
         x += 1;
         y += 1;
@@ -191,7 +194,7 @@ function loop() {
   // create an array that contains 5 letter words
   
   const fiveLetterWords = ['black', 'clock', 'brown', 'blast', 'stick', 'stamp', 'disty', 'child', 'style', 'frame', 'mucky', 'banjo', 'rythm'];
-  // function to randomly select a word from the array
+  
   function getRandomWord() {
     const randomWordIndex = Math.floor(Math.random() * fiveLetterWords.length);
     return fiveLetterWords[randomWordIndex];
@@ -214,8 +217,7 @@ function loop() {
       existingDiv.textContent = randomWordArray[i];
     }
   }
-  // trying to create the letter buttons in the keys box area
-  // create keys
+  
   /**
    * createLetterForKeys function to create the letters, put the letters into the key from createKay
    */
@@ -232,20 +234,18 @@ function loop() {
       keysBox.appendChild(keys);
     }
   }
-  /* let getLetters = document.getElementById('getLetters')
-      getLetters.addEventListener('click', createLettersForKeys) */
+ 
   
   /**
    * @param {createKey} letter function to create a key. Style the background red. Function call extra functionality when need the letter button click to call the revealNextPart
-   * @returns
    */
   function createKey(letter) {
     const key = document.createElement('span');
     key.className = 'key';
     key.textContent = letter;
-    /**
-   * Event listener on Key to turn red when clicked and to call the checkAndHighlightLetter function
-   */
+    
+   // Event listener on Key to turn red when clicked and to call the checkAndHighlightLetter function
+   
     key.addEventListener('click', (event) => {
       key.style.backgroundColor = 'red';
       checkAndHighlightLetter(letter);
@@ -253,12 +253,12 @@ function loop() {
     return key;
   }
   // push the letters from the random array into the underline div. made letters white in css  so cant see in div until it turns to blue and add to the eventlistener
+  
+  const clickedLettersArray = [];
   /**
    *
    * @param {checkAndHighlightLetter} clickedLetter function to check if the letter selected is in the array then it changes the div to blue and highlights the letter. Also to call the revealNextPart function if fased
    */
-  const clickedLettersArray = [];
-  
   function checkAndHighlightLetter(clickedLetter) {
     let letterMatched = false;
   
@@ -279,9 +279,11 @@ function loop() {
     handleClickedLetter(clickedLetter);
     areArraysEqual(randomWordArray, clickedLettersArray);
   }
+
+
   function handleClickedLetter(letter) {
     clickedLettersArray.push(...letter);
-    console.log(clickedLettersArray);
+    
   
     return clickedLettersArray;
   }
@@ -290,6 +292,7 @@ function loop() {
    *
    * @param {*} clickedLettersArray an array to store the clicked letters
    * @param {*} randomWordArray an array to store the random word selected
+   * 
    * areArraysEqual check if all letters in the randomWordArray are present in the clickedLettersArray and if are, returns the win alert
   
    */
@@ -309,6 +312,10 @@ function loop() {
       let e = 200;
       let f = 150;
       let g = 200;
+
+    /**
+     * loop function to animate the man when the user wins the game
+     */
       function loop() {
         x += 1;
         y += 1;
@@ -371,13 +378,37 @@ function loop() {
         }
       }
       window.requestAnimationFrame(loop);
-      alert('Congratulations you just saved the poor man from the jaws of death. Well done, you deserve a drink....... ');
+
+      setTimeout(function() {
+        showModal();
+    }, 1000);
+      /**
+       * showModal function to create a congratulations box after the animation loop
+       */
+      function showModal() {
+        // Create a modal element
+        var modal = document.createElement('div');
+        modal.className = 'modal';
+        
+        // Add message to the modal
+        var message = document.createElement('p');
+        message.textContent = 'Congratulations, you saved the man!';
+        modal.appendChild(message);
+        
+        // Add modal to the document body
+        document.body.appendChild(modal);
+    }
+     
+      
+   
   
       // 2D Animations with Canvas and JavaScript  Kyle Robinson Young Youtube video
-    } else {
-      console.log('not all letters present');
-    }
-    }
+    } 
+  }
+  
+    
+
+    
   
   
   /*function youLost() {
