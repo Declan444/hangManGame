@@ -3,12 +3,10 @@
  * Reset game function
  */
 function resetGame() {
-    console.log('calling resetGame function');
     location.reload();
   }
   const reset = document.getElementById('reset');
   reset.addEventListener('click', resetGame);
-  
   
   const canvas = document.getElementById('stickmanCanvas');
   const draw = canvas.getContext('2d');
@@ -26,9 +24,9 @@ function resetGame() {
   };
   /**
    *
-   * @param {drawStickman} object the function that draws each part of the stickman on the canvas
+   * @param drawStickman the function that draws each part of the stickman on the canvas
    */
-  function drawStickman(object) {
+  function drawStickman() {
   // scaffold
     if (bodyPart.scaffold) {
       draw.beginPath();
@@ -95,9 +93,10 @@ function resetGame() {
     } else if (!bodyPart.rightLeg) {
       bodyPart.rightLeg = true;
     } else {
-      const canvas = document.getElementById('stickmanCanvas');
-      const draw = canvas.getContext('2d');
-  
+      //const canvas = document.getElementById('stickmanCanvas');
+      //const draw = canvas.getContext('2d');
+    }
+  }
       let x = 50;
       let y = 75;
       let a = 150;
@@ -136,7 +135,7 @@ function loop() {
         draw.stroke();
         // smile
         draw.beginPath();
-        draw.arc(150, 50 + 13, 11, 1 * Math.PI, 2.0 * Math.PI); // Updated end angle to make the smile turn down
+        draw.arc(150, 50 + 13, 11, 1 * Math.PI, 2.0 * Math.PI); // Changed the end angle to make the smile turn down
         draw.stroke();
   
         // eyes
@@ -189,11 +188,11 @@ function loop() {
        */
       function showModal() {
         // Create a modal element
-        var modal = document.createElement('div');
+        let modal = document.createElement('div');
         modal.className = 'modal';
         
         // Add message to the modal
-        var message = document.createElement('p');
+        let message = document.createElement('p');
         message.textContent = `OOP's hes dead. The correct word was...${randomWordArray.join('').toUpperCase()}`;
         modal.appendChild(message);
         
@@ -201,11 +200,11 @@ function loop() {
         document.body.appendChild(modal);
     }
   
-      //alert(`Sorry but you just killed the poor man :(  The correct word was .....${randomWordArray.join('').toUpperCase()}`);
-    }
+      
+    
   
     drawStickman(bodyPart);
-  }
+  
   
   /**
    * getRandomWord function to randomely select a word from the array. Return it as an array and assign it to selectedWord
@@ -228,7 +227,7 @@ function loop() {
   
   console.log(randomWordArray);
   
-  // pushes the word into the underline divs.
+  // push the word into the underline divs
   
   for (let i = 0; i < randomWordArray.length; i++) {
     const existingDiv = document.getElementById(`letter-${i + 1}`);
@@ -240,7 +239,7 @@ function loop() {
   /**
    * createLetterForKeys function to create the letters, put the letters into the key from createKay
    */
-  function createLettersForKeys() {
+  //function createLettersForKeys() {
     const letters = [];
   
     for (let i = 97; i <= 122; i++) {
@@ -252,9 +251,7 @@ function loop() {
       const keys = createKey(letters[i]);
       keysBox.appendChild(keys);
     }
-  }
- 
-  
+  //}
   /**
    * @param {createKey} letter function to create a key. Style the background red. Function call extra functionality when need the letter button click to call the revealNextPart
    */
@@ -265,7 +262,7 @@ function loop() {
     
    // Event listener on Key to turn red when clicked and to call the checkAndHighlightLetter function
    
-    key.addEventListener('click', (event) => {
+    key.addEventListener('click', () => {
       key.style.backgroundColor = 'red';
       checkAndHighlightLetter(letter);
     });
@@ -310,15 +307,17 @@ function loop() {
    * @param {*} clickedLettersArray an array to store the clicked letters
    * @param {*} randomWordArray an array to store the random word selected
    * 
-   * areArraysEqual check if all letters in the randomWordArray are present in the clickedLettersArray and if are, returns the win alert
+   * areArraysEqual check if all letters in the randomWordArray are present in the clickedLettersArray and if are, returns the win message
   
    */
   function areArraysEqual(randomWordArray, clickedLettersArray) {
     const alllettersPresent = randomWordArray.every((letter) => clickedLettersArray.includes(letter));
   
     if (alllettersPresent) {
-      const canvas = document.getElementById('stickmanCanvas');
-      const draw = canvas.getContext('2d');
+      //const canvas = document.getElementById('stickmanCanvas');
+      //const draw = canvas.getContext('2d');
+    }
+  
   
       let x = 50;
       let y = 75;
@@ -395,7 +394,8 @@ function loop() {
         }
       }
       window.requestAnimationFrame(loop);
-
+    }
+  
       setTimeout(function() {
         showModal();
     }, 1000);
@@ -404,11 +404,11 @@ function loop() {
        */
       function showModal() {
         // Create a modal element
-        var modal = document.createElement('div');
+        let modal = document.createElement('div');
         modal.className = 'modal';
         
         // Add message to the modal
-        var message = document.createElement('p');
+        let message = document.createElement('p');
         message.textContent = 'Congratulations, you saved the man!';
         modal.appendChild(message);
         
@@ -419,9 +419,9 @@ function loop() {
       
    
   
-      // 2D Animations with Canvas and JavaScript  Kyle Robinson Young Youtube video
-    } 
-  }
+      
+    
+  
   
     
   
