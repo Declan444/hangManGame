@@ -9,7 +9,7 @@ function resetGame() {
   const reset = document.getElementById('reset');
   reset.addEventListener('click', resetGame);
   
-  // used W3 Schools to work out how to draw the stickman
+  
   const canvas = document.getElementById('stickmanCanvas');
   const draw = canvas.getContext('2d');
   //BodyPart will be the object that contains all of the stickman sections. Set boolean to false to not appear on the canvas
@@ -108,7 +108,7 @@ function resetGame() {
       let f = 150;
       let g = 200;
 /**
- * loop function to animage the image and turn the background red when the player loses the game
+ * loop function to animate the image and turn the background red when the player loses the game
  */
 function loop() {
         x += 1;
@@ -180,15 +180,35 @@ function loop() {
         }
       }
       window.requestAnimationFrame(loop);
+
+      setTimeout(function() {
+        showModal();
+    }, 1000);
+      /**
+       * showModal function to create a you lost  box after the animation loop
+       */
+      function showModal() {
+        // Create a modal element
+        var modal = document.createElement('div');
+        modal.className = 'modal';
+        
+        // Add message to the modal
+        var message = document.createElement('p');
+        message.textContent = `OOP's hes dead. The correct word was...${randomWordArray.join('').toUpperCase()}`;
+        modal.appendChild(message);
+        
+        // Add modal to the document body
+        document.body.appendChild(modal);
+    }
   
-      alert(`Sorry but you just killed the poor man :(  The correct word was .....${randomWordArray.join('').toUpperCase()}`);
+      //alert(`Sorry but you just killed the poor man :(  The correct word was .....${randomWordArray.join('').toUpperCase()}`);
     }
   
     drawStickman(bodyPart);
   }
   
   /**
-   * getRandomWord function to randomely select a word from the array. return it as an array and assign it to selectedWord
+   * getRandomWord function to randomely select a word from the array. Return it as an array and assign it to selectedWord
    */
   
   // create an array that contains 5 letter words
@@ -201,7 +221,6 @@ function loop() {
   }
   
   const selectedWord = getRandomWord();
-  console.log(selectedWord);
   
   // create an array from the selected word
   
@@ -280,11 +299,9 @@ function loop() {
     areArraysEqual(randomWordArray, clickedLettersArray);
   }
 
-
   function handleClickedLetter(letter) {
     clickedLettersArray.push(...letter);
     
-  
     return clickedLettersArray;
   }
   
