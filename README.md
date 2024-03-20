@@ -33,10 +33,13 @@ If the user selects an incorrect letter, the letter that they have selected in t
 ![image](https://github.com/Declan444/hangManGame/assets/119152450/b5995305-5ad3-436b-a20d-f2b63a58f7ce)
 
 If the user correctly selects all the letters in the word, thereby winning the game, the man falls from the gallows with his head in tact and a smile on his face. A box appears on the screen to congratulate them on saving the man.
-![image](https://github.com/Declan444/hangManGame/assets/119152450/6848d439-ecdd-483e-be4a-9f81a5deefd5)
+
+![image](https://github.com/Declan444/hangManGame/assets/119152450/20e285ea-008b-4349-b744-6ee5df1c0a5d)
+
 
 If the user can not solve the word,  the body minus the head falls to the ground, the head makes a sad face and the background turns red. A box appears on the screen telling them that the man is dead and shows them the correct answer.
-![image](https://github.com/Declan444/hangManGame/assets/119152450/84301f5a-53e5-4f8c-98c5-6279fc03ae3d)
+
+![image](https://github.com/Declan444/hangManGame/assets/119152450/7973aa35-4425-480a-92e1-fabeb43ac731)
 
 The user can then click new game to start the process over again.
 
@@ -61,7 +64,9 @@ The game has been tested on laptops, wide screens and on various phone screens b
 ![image](https://github.com/Declan444/hangManGame/assets/119152450/a4d51274-6e2c-4fad-adaa-43e85c7cbc6a)
 
 ## javascript validation to go here
-![image](https://github.com/Declan444/hangManGame/assets/119152450/886885c4-8913-4120-9dad-146ec21ac250)
+
+
+![image](https://github.com/Declan444/hangManGame/assets/119152450/738c7149-6adb-4fa9-a152-7e1b4a8b87b5)
 
 
 ## Lighthouse Testing
