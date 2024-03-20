@@ -424,14 +424,4 @@ function loop() {
   }
   
     
-
-    
-  
-  
-  /*function youLost() {
-    const canvas = document.getElementById('stickmanCanvas');
-    const draw = canvas.getContext('2d');
-  
-    window.requestAnimationFrame();
-  }*/
   
