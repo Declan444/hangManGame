@@ -3,6 +3,7 @@
  * Reset game function
  */
 function resetGame() {
+    console.log('calling reset game function')
     location.reload();
   }
   const reset = document.getElementById('reset');
@@ -26,7 +27,7 @@ function resetGame() {
    *
    * @param drawStickman the function that draws each part of the stickman on the canvas
    */
-  function drawStickman() {
+  function drawStickman(object) {
   // scaffold
     if (bodyPart.scaffold) {
       draw.beginPath();
@@ -92,11 +93,11 @@ function resetGame() {
       bodyPart.leftLeg = true;
     } else if (!bodyPart.rightLeg) {
       bodyPart.rightLeg = true;
-    } else {
-      //const canvas = document.getElementById('stickmanCanvas');
-      //const draw = canvas.getContext('2d');
-    }
-  }
+    }else {
+      const canvas = document.getElementById('stickmanCanvas');
+      const draw = canvas.getContext('2d');
+    
+  
       let x = 50;
       let y = 75;
       let a = 150;
@@ -175,17 +176,21 @@ function loop() {
         draw.stroke();
   
         if (x < 100) {
-          window.requestAnimationFrame(loop);
+          //window.requestAnimationFrame(loop);
         }
       }
+    
       window.requestAnimationFrame(loop);
-
-      setTimeout(function() {
+      alert('Sorry dead')
+    }
+    drawStickman(bodyPart)
+  }
+      /*setTimeout(function() {
         showModal();
     }, 1000);
       /**
        * showModal function to create a you lost  box after the animation loop
-       */
+       
       function showModal() {
         // Create a modal element
         let modal = document.createElement('div');
@@ -198,12 +203,12 @@ function loop() {
         
         // Add modal to the document body
         document.body.appendChild(modal);
-    }
+    }*/
   
       
     
   
-    drawStickman(bodyPart);
+    //drawStickman(bodyPart);
   
   
   /**
@@ -251,6 +256,7 @@ function loop() {
       const keys = createKey(letters[i]);
       keysBox.appendChild(keys);
     }
+  
   //}
   /**
    * @param {createKey} letter function to create a key. Style the background red. Function call extra functionality when need the letter button click to call the revealNextPart
@@ -314,9 +320,9 @@ function loop() {
     const alllettersPresent = randomWordArray.every((letter) => clickedLettersArray.includes(letter));
   
     if (alllettersPresent) {
-      //const canvas = document.getElementById('stickmanCanvas');
-      //const draw = canvas.getContext('2d');
-    }
+      const canvas = document.getElementById('stickmanCanvas');
+      const draw = canvas.getContext('2d');
+    
   
   
       let x = 50;
@@ -393,9 +399,10 @@ function loop() {
           window.requestAnimationFrame(loop);
         }
       }
+    
       window.requestAnimationFrame(loop);
-    }
-  
+      alert('Your alive')
+    
       setTimeout(function() {
         showModal();
     }, 1000);
@@ -414,9 +421,15 @@ function loop() {
         
         // Add modal to the document body
         document.body.appendChild(modal);
+      }
+    } else{
+      console.log('not all letters present')
     }
-     
-      
+  }
+  
+    
+    
+    
    
   
       
