@@ -4,6 +4,10 @@
 The Hangman Game is designed to ask the player to try to solve the 5 letter word before the man is hanged. Each time the player gets a correct letter it is entered into the space provide for that particular letter and each time the letter is incorrect a part of the hanging process appears. Also when the letter is pressed the key turns red to signify that the letter has been pressed. If the user solves the word before the man is hanged they are congratulated and the man falls to the ground, saved, but if they don't solve the word, the man is hanged and his body minus his head falls to the ground and the game area turns red.
 
 ## The Landing Page
+
+![image](https://github.com/Declan444/hangManGame/assets/119152450/1985973c-9d92-46ae-b065-2daba314c820)
+
+
 This i a very simple one page site. The user lands on the actual game page so that they can play immediately. They are given the game name, followed by a simple list of instructions on how to play the game. These can be seen in the screenshot above. As the game is designed for children also, the game is designed to be as simple as possible to follow and also designed to be as intuitive as possible with just four simple instructions. 
 
 ## Design
@@ -44,7 +48,6 @@ The user can then click new game to start the process over again.
 
 The footer contains a copyright LA Research Labs 2024
 
-## Wireframe
 
 ## Future Features
 Ideally with more time and development, the user would be asked to select the length of letters in the word that they want to play e.g. a 3 letter word, 4 letter word, 5 letter word etc. This would give the user more difficult challenges with the game. Also a suggestion by on user was to change the keypad to a qwerty layout.
