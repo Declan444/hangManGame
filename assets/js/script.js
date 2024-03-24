@@ -176,21 +176,18 @@ function loop() {
         draw.stroke();
   
         if (x < 100) {
-          //window.requestAnimationFrame(loop);
+          window.requestAnimationFrame(loop);
         }
       }
     
       window.requestAnimationFrame(loop);
-      alert('Sorry dead')
-    }
-    drawStickman(bodyPart)
-  }
-      /*setTimeout(function() {
+      //alert('Sorry dead')
+      setTimeout(function() {
         showModal();
     }, 1000);
       /**
        * showModal function to create a you lost  box after the animation loop
-       
+       */
       function showModal() {
         // Create a modal element
         let modal = document.createElement('div');
@@ -203,12 +200,16 @@ function loop() {
         
         // Add modal to the document body
         document.body.appendChild(modal);
-    }*/
+    }
+    }
+    drawStickman(bodyPart)
+  }
+     
   
       
     
   
-    //drawStickman(bodyPart);
+    drawStickman(bodyPart);
   
   
   /**
@@ -401,7 +402,7 @@ function loop() {
       }
     
       window.requestAnimationFrame(loop);
-      alert('Your alive')
+      //alert('Your alive')
     
       setTimeout(function() {
         showModal();
@@ -423,7 +424,7 @@ function loop() {
         document.body.appendChild(modal);
       }
     } else{
-      console.log('not all letters present')
+      /*console.log('not all letters present')*/
     }
   }
   
