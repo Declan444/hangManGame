@@ -3,7 +3,7 @@
  * Reset game function
  */
 function resetGame() {
-    console.log('calling reset game function')
+    
     location.reload();
   }
   const reset = document.getElementById('reset');
@@ -107,10 +107,11 @@ function resetGame() {
       let e = 200;
       let f = 150;
       let g = 200;
+      
 /**
  * loop function to animate the image and turn the background red when the player loses the game
  */
-function loop() {
+let loop = function() {
         x += 1;
         y += 1;
         a += 1;
@@ -178,7 +179,7 @@ function loop() {
         if (x < 100) {
           window.requestAnimationFrame(loop);
         }
-      }
+      };
     
       window.requestAnimationFrame(loop);
       //alert('Sorry dead')
@@ -188,7 +189,7 @@ function loop() {
       /**
        * showModal function to create a you lost  box after the animation loop
        */
-      function showModal() {
+      let showModal = function() {
         // Create a modal element
         let modal = document.createElement('div');
         modal.className = 'modal';
@@ -200,9 +201,10 @@ function loop() {
         
         // Add modal to the document body
         document.body.appendChild(modal);
+    };
     }
-    }
-    drawStickman(bodyPart)
+  
+    drawStickman(bodyPart);
   }
      
   
@@ -318,13 +320,13 @@ function loop() {
   
    */
   function areArraysEqual(randomWordArray, clickedLettersArray) {
-    const alllettersPresent = randomWordArray.every((letter) => clickedLettersArray.includes(letter));
+    const allLettersPresent = randomWordArray.every((letter) => clickedLettersArray.includes(letter));
   
-    if (alllettersPresent) {
+    if (allLettersPresent) {
       const canvas = document.getElementById('stickmanCanvas');
       const draw = canvas.getContext('2d');
     
-  
+    
   
       let x = 50;
       let y = 75;
@@ -339,7 +341,7 @@ function loop() {
     /**
      * loop function to animate the man when the user wins the game
      */
-      function loop() {
+    const loop = function() {
         x += 1;
         y += 1;
         a += 1;
@@ -395,11 +397,11 @@ function loop() {
         draw.moveTo(150, f);
         draw.lineTo(200, g);
         draw.stroke();
-  
+    
         if (x < 100) {
           window.requestAnimationFrame(loop);
         }
-      }
+      };
     
       window.requestAnimationFrame(loop);
       //alert('Your alive')
@@ -410,7 +412,7 @@ function loop() {
       /**
        * showModal function to create a congratulations box after the animation loop
        */
-      function showModal() {
+      let showModal = function() {
         // Create a modal element
         let modal = document.createElement('div');
         modal.className = 'modal';
@@ -422,9 +424,9 @@ function loop() {
         
         // Add modal to the document body
         document.body.appendChild(modal);
-      }
+      };
     } else{
-      /*console.log('not all letters present')*/
+      
     }
   }
   
