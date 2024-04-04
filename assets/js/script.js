@@ -182,7 +182,6 @@ let loop = function() {
       };
     
       window.requestAnimationFrame(loop);
-      //alert('Sorry dead')
       setTimeout(function() {
         showModal();
     }, 1000);
@@ -196,28 +195,20 @@ let loop = function() {
         
         // Add message to the modal
         let message = document.createElement('p');
-        message.textContent = `OOP's hes dead. The correct word was...${randomWordArray.join('').toUpperCase()}`;
+        message.textContent = `OOPs he's dead. The correct word was...${randomWordArray.join('').toUpperCase()}`;
         modal.appendChild(message);
         
         // Add modal to the document body
         document.body.appendChild(modal);
     };
     }
-  
     drawStickman(bodyPart);
   }
-     
-  
-      
-    
   
     drawStickman(bodyPart);
-  
-  
   /**
    * getRandomWord function to randomely select a word from the array. Return it as an array and assign it to selectedWord
    */
-  
   // create an array that contains 5 letter words
   
   const fiveLetterWords = ['black', 'clock', 'brown', 'blast', 'stick', 'stamp', 'disty', 'child', 'style', 'frame', 'mucky', 'banjo', 'rythm'];
@@ -325,9 +316,6 @@ let loop = function() {
     if (allLettersPresent) {
       const canvas = document.getElementById('stickmanCanvas');
       const draw = canvas.getContext('2d');
-    
-    
-  
       let x = 50;
       let y = 75;
       let a = 150;
@@ -368,12 +356,10 @@ let loop = function() {
         draw.beginPath();
         draw.arc(150, x + 5, 15, 0.2 * Math.PI, 0.8 * Math.PI);
         draw.stroke();
-  
         // eyes
         draw.beginPath();
         draw.arc(140, x - 5, 2, 0, 2 * Math.PI);
         draw.stroke();
-  
         draw.beginPath();
         draw.arc(160, x - 5, 2, 0, 2 * Math.PI);
         draw.stroke();
