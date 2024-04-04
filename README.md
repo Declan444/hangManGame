@@ -73,7 +73,7 @@ The game has been tested on laptops, wide screens and on various phone screens b
 ![image](https://github.com/Declan444/hangManGame/assets/119152450/c63608fb-20ea-4b29-9097-7d3f30327671)
 
 ## Deployment
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub)
+
 
 The site was deployed to GitHub pages. The steps to deploy are as follows:
 In the GitHub repository, navigate to the Settings tab
