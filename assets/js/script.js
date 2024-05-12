@@ -184,6 +184,7 @@ let loop = function() {
       window.requestAnimationFrame(loop);
       setTimeout(function() {
         showModal();
+        disableLetterButtons();
     }, 1000);
       /**
        * showModal function to create a you lost  box after the animation loop
@@ -201,6 +202,16 @@ let loop = function() {
         // Add modal to the document body
         document.body.appendChild(modal);
     };
+    let disableLetterButtons = () => {
+      const letterButtons = document.querySelectorAll('span.key');
+      letterButtons.forEach(button => {
+          button.style.pointerEvents = 'none';
+          button.classList.add('disabled');
+        
+      });
+
+      document.getElementById('reset').disabled = false;
+  }; 
     }
     drawStickman(bodyPart);
   }
@@ -394,6 +405,8 @@ let loop = function() {
     
       setTimeout(function() {
         showModal();
+      //Disable letter buttons after winning
+        disableLetterButtons();
     }, 1000);
       /**
        * showModal function to create a congratulations box after the animation loop
@@ -411,7 +424,18 @@ let loop = function() {
         // Add modal to the document body
         document.body.appendChild(modal);
       };
-    } else{
+
+      let disableLetterButtons = () => {
+        const letterButtons = document.querySelectorAll('span.key');
+        letterButtons.forEach(button => {
+            button.style.pointerEvents = 'none';
+            button.classList.add('disabled');
+          
+        });
+
+        document.getElementById('reset').disabled = false;
+    };    
+    }else{
       
     }
   }
