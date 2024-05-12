@@ -249,7 +249,7 @@ let loop = function() {
   /**
    * createLetterForKeys function to create the letters, put the letters into the key from createKay
    */
-  //function createLettersForKeys() {
+ 
     const letters = [];
   
     for (let i = 97; i <= 122; i++) {
@@ -262,7 +262,7 @@ let loop = function() {
       keysBox.appendChild(keys);
     }
   
-  //}
+  
   /**
    * @param {createKey} letter function to create a key. Style the background red. Function call extra functionality when need the letter button click to call the revealNextPart
    */
@@ -401,7 +401,7 @@ let loop = function() {
       };
     
       window.requestAnimationFrame(loop);
-      //alert('Your alive')
+      
     
       setTimeout(function() {
         showModal();
