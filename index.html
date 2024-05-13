@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HangMan</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <div id="outer-container">
         <div id="game-text" class="game-outline">
             <h1>HangMan</h1>
-            <p>Game Information</p>               
+            <p>Game Information</p>
             <ol>
                 <li>1. Click a letter.</li>
                 <li>2. If correct, the letter appears in blue.</li>
@@ -18,28 +20,29 @@
                 <li>4. You get 8 attempts to save the Man.</li>
             </ol>
         </div>
-            <div id="game">
-                <canvas id="stickmanCanvas" width="300" height="250"></canvas>   
-            </div>
-            <div class="underline">
-                <div id="letter-1" class="underline-box"></div>
-                <div id="letter-2" class="underline-box"> </div>
-                <div id="letter-3" class="underline-box"> </div>
-                <div id="letter-4" class="underline-box"> </div>
-                <div id="letter-5" class="underline-box"> </div>
-            </div>
-            <div id="keys-outer-box">
-                <div id="keys-box">                    
-                <button id="reset">New Game</button> 
-                </div>
-            </div>
-            <div id="box"></div>
+        <div id="game">
+            <canvas id="stickmanCanvas" width="300" height="250"></canvas>
         </div>
- 
-<footer>
+        <div class="underline">
+            <div id="letter-1" class="underline-box"></div>
+            <div id="letter-2" class="underline-box"> </div>
+            <div id="letter-3" class="underline-box"> </div>
+            <div id="letter-4" class="underline-box"> </div>
+            <div id="letter-5" class="underline-box"> </div>
+        </div>
+        <div id="keys-outer-box">
+            <div id="keys-box">
+                <button id="reset">New Game</button>
+            </div>
+        </div>
+        <div id="box"></div>
+    </div>
 
-    Copyright LAResearch Labs 2024
-</footer>
+    <footer>
+
+        Copyright LAResearch Labs 2024
+    </footer>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>

@@ -1,27 +1,31 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
 }
-#outer-container{
+
+#outer-container {
     display: flex;
     flex-direction: column;
     background-color: brown;
-    height: auto;    
+    height: auto;
 }
-#game-text{
+
+#game-text {
     display: flex;
     background-color: bisque;
     flex-direction: column;
     text-align: center;
     margin: 5px;
-    padding-bottom: 10px;   
+    padding-bottom: 10px;
 }
-#game-text div{
+
+#game-text div {
     display: flex;
     height: 30px;
     width: auto;
@@ -31,7 +35,8 @@ body{
     margin: 5px;
     justify-content: center;
 }
-#stickmanCanvas{
+
+#stickmanCanvas {
     margin: 0;
     display: flex;
     align-items: center;
@@ -42,7 +47,8 @@ body{
     border-bottom: 5px solid #ccc;
     margin-top: 25px;
 }
-#game{
+
+#game {
     height: 310px;
     width: auto;
     justify-self: center;
@@ -51,6 +57,7 @@ body{
     justify-content: center;
     margin: 0 5px;
 }
+
 .underline {
     display: flex;
     border-bottom: 1px solid rgb(233, 42, 42);
@@ -61,7 +68,8 @@ body{
     height: auto;
     justify-content: center;
 }
-.underline-box{
+
+.underline-box {
     width: 20px;
     height: 20px;
     border-bottom: 2px solid black;
@@ -69,15 +77,17 @@ body{
     text-align: center;
     color: bisque
 }
-#keys-outer-box{
+
+#keys-outer-box {
     display: flex;
     justify-content: center;
     background-color: bisque;
     margin-right: 5px;
-    margin-bottom:5px;
+    margin-bottom: 5px;
     margin-left: 5px
 }
-#keys-box{
+
+#keys-box {
     display: flex;
     flex-wrap: wrap;
     width: auto;
@@ -89,7 +99,8 @@ body{
     align-content: baseline;
     height: auto;
 }
-.key{
+
+.key {
     display: flex;
     height: 30px;
     width: 30px;
@@ -103,15 +114,18 @@ body{
     font-weight: bold;
     font-size: larger;
 }
-#reset{
+
+#reset {
     box-shadow: 5px 5px 5px rgb(8, 100, 131);
     padding: 5px;
 }
-#box{
+
+#box {
     width: auto;
     height: auto;
     background-color: bisque;
 }
+
 .modal {
     position: fixed;
     top: 50%;
@@ -123,9 +137,10 @@ body{
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 9999;
-  }
-footer{ 
+}
+
+footer {
     text-align: center;
-    width:auto;
+    width: auto;
     height: 10px;
 }
