@@ -9,8 +9,8 @@
 </head>
 
 <body>
-    <div id="outer-container">
-        <div id="game-text" class="game-outline">
+    <main id="outer-container">
+        <section id="game-text" class="game-outline">
             <h1>HangMan</h1>
             <p>Game Information</p>
             <ol>
@@ -19,27 +19,25 @@
                 <li>3. If incorrect, a part of the HangMan appears.</li>
                 <li>4. You get 8 attempts to save the Man.</li>
             </ol>
-        </div>
-        <div id="game">
+        </section>
+        <section id="game">
             <canvas id="stickmanCanvas" width="300" height="250"></canvas>
-        </div>
-        <div class="underline">
+        </section>
+        <section class="underline">
             <div id="letter-1" class="underline-box"></div>
             <div id="letter-2" class="underline-box"> </div>
             <div id="letter-3" class="underline-box"> </div>
             <div id="letter-4" class="underline-box"> </div>
             <div id="letter-5" class="underline-box"> </div>
-        </div>
-        <div id="keys-outer-box">
+        </section>
+        <section id="keys-outer-box">
             <div id="keys-box">
                 <button id="reset">New Game</button>
             </div>
-        </div>
+        </section>
         <div id="box"></div>
-    </div>
-
+    </main>
     <footer>
-
         Copyright LAResearch Labs 2024
     </footer>
     <script src="assets/js/script.js"></script>
